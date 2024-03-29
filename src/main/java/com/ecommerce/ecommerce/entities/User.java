@@ -30,15 +30,6 @@ public class User {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "role_id")
     private Role role;
-//
-//	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-//	private Cart cart;
 
-
-
-    
-
-    
-
-    // Constructors, getters, and setters
+// Constructors, getters, and setters
 }

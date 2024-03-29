@@ -7,7 +7,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Order1 {
     @Id
@@ -21,43 +29,8 @@ public class Order1 {
     @JoinColumn(name = "user_id")
     private User user;
 
-	public Long getOrderId() {
-		return orderId;
-	}
-
-	public void setOrderId(Long orderId) {
-		this.orderId = orderId;
-	}
 
 
-
-	public double getOrderPrice() {
-		return orderPrice;
-	}
-
-	public void setOrderPrice(double orderPrice) {
-		this.orderPrice = orderPrice;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	public Order1(Long orderId, double orderPrice, User user) {
-		super();
-		this.orderId = orderId;
-
-		this.orderPrice = orderPrice;
-		this.user = user;
-	}
-
-	public Order1() {
-		super();
-	}
     
     
 
