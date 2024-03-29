@@ -1,5 +1,6 @@
 package com.ecommerce.ecommerce.entities;
 
+import com.ecommerce.ecommerce.dto.UserDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,11 +24,13 @@ public class Order1 {
     private Long orderId;
 
 
-    private double orderPrice;
+    private Long totalAmount;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    private User user;
+    private Long userId;
+
 
 
 
